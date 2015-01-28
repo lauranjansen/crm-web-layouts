@@ -14,12 +14,13 @@ get '/contacts' do
   erb :contacts
 end
 
-# get '/contacts/:id' do
-
-# end
-
 get '/contacts/new_contact' do
 	erb :new_contact
+end
+
+get '/contacts/:id' do
+	@contact = $rolodex.find_contact(params[:id])
+	erb :contact
 end
 
 post '/contacts' do

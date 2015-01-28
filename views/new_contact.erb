@@ -1,19 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8">
-		<title>New Contact</title>
-	</head>
-	<body>
+<body>
+	<header>
 		<h1>New Contact</h1>
-
+	</header>
+	<main>
 		<form action="/contacts" method="post">
-			<input type="text" name="first_name">
-			<input type="text" name="last_name">
-			<input type="text" name="email">
-			<input type="text" name="note">
-			
-			<input type="submit">
+			<fieldset>
+				<legend>Contact Details</legend>
+				<p><label for="First Name">First Name:</label><input type="text" name="first_name" class="textbox"></p>
+				<p><label for="Last Name">Last Name:</label><input type="text" name="last_name" class="textbox"></p>
+				<p><label for="Email">Email:</label><input type="text" name="email" class="textbox"></p>
+				<p><label for="Note">Note:</label><input type="text" name="note" class="textbox"></p>
+			</fieldset>	
+			<input class="button" type="submit">
 		</form>
-	</body>
-</html>
+	</main>
+</body>

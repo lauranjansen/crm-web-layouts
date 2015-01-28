@@ -10,16 +10,12 @@
 		<ul>
 			<% @contacts.each do |contact| %>
 				<li>
-					<% name = contact.first_name %>
-					<%= "<a href='#{name}'>" %>
-						<%= name %>
+					<a href="/contacts/<%= contact.id %>">
+						<%= contact.first_name %>
 						<%= contact.last_name %>
 					</a>
 				</li>
 			<% end %>
-			<li>
-				<a href="/contacts/new_contact">Add a contact</a>
-			</li>
 		</ul>
 	</body>
 </html>
