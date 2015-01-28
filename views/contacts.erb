@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>View All Contacts</title>
+	</head>
+	<body>
+		<h1>Contacts</h1>
+
+		<ul>
+			<% @contacts.each do |contact| %>
+				<li>
+					<% name = contact.first_name %>
+					<%= "<a href='#{name}'>" %>
+						<%= name %>
+						<%= contact.last_name %>
+					</a>
+				</li>
+			<% end %>
+			<li>
+				<a href="/contacts/new_contact">Add a contact</a>
+			</li>
+		</ul>
+	</body>
+</html>
